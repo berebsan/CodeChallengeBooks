@@ -1,4 +1,4 @@
-package com.brs.codechallenge.ui
+package com.brs.codechallenge.view
 
 import android.content.Context
 import android.net.Uri

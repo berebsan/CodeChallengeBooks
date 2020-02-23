@@ -1,4 +1,4 @@
-package com.brs.codechallenge.ui
+package com.brs.codechallenge.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
