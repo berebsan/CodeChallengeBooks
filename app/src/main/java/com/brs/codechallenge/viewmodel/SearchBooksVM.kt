@@ -41,11 +41,13 @@ class SearchBooksVM : BaseVM() {
         searchWord = ""
         subscription.dispose()
     }
+
     private fun showLoader(isLoading: Boolean) {
         resultsVisibility.value = View.GONE
         loaderVisibility.value = if (isLoading) View.VISIBLE else View.GONE
         instructionVisibility.value = View.GONE
     }
+
     private fun showResult(response: GoogleBooksResponseModel) {
         resultsVisibility.value = View.VISIBLE
         searchResultsAdapter.updateBookList(response.volumeList)

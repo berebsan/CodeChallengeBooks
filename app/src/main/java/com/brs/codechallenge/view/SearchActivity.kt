@@ -1,7 +1,6 @@
 package com.brs.codechallenge.view
 
 import android.os.Bundle
-import android.view.View
 import android.widget.SearchView
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity

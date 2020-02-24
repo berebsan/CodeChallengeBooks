@@ -1,13 +1,12 @@
 package com.brs.codechallenge.view.adapters
 
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.brs.codechallenge.model.api.VolumeModel
 import android.view.LayoutInflater
-import com.brs.codechallenge.R
+import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.RecyclerView
+import com.brs.codechallenge.R
 import com.brs.codechallenge.databinding.ItemBookCardBinding
-import com.brs.codechallenge.model.api.BookInfoModel
+import com.brs.codechallenge.model.api.VolumeModel
 import com.brs.codechallenge.viewmodel.BookResultsVM
 
 class SearchResultsAdapter : RecyclerView.Adapter<SearchResultsAdapter.BooksViewHolder>() {
