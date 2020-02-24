@@ -9,6 +9,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.brs.codechallenge.R
+import com.brs.codechallenge.constants.Constants.Companion.AUTHOR_NOT_AVAIABLE
 import com.brs.codechallenge.constants.Constants.Companion.INFO_NOT_AVAILABLE
 import com.squareup.picasso.Picasso
 
@@ -24,7 +25,7 @@ fun setMutableVisibility(view: View, visibility: MutableLiveData<Int>?) {
 fun setMutableText(view: TextView, text: MutableLiveData<String>?) {
     val parentActivity:AppCompatActivity? = view.getParentActivity()
     if(parentActivity != null && text != null) {
-        text.observe(parentActivity, Observer { value -> view.text = value?:""})
+        text.observe(parentActivity, Observer { value -> view.text = value?: INFO_NOT_AVAILABLE})
     }
 }
 
@@ -39,7 +40,7 @@ fun setAuthors(view: TextView, authors: MutableLiveData<List<String>>) {
     if (parentActivity != null)
         authors.observe(
             parentActivity,
-            Observer { value -> view.text = value?.joinToString(", ") ?: INFO_NOT_AVAILABLE })
+            Observer { value -> view.text = value?.joinToString(", ") ?: AUTHOR_NOT_AVAIABLE })
 }
 
 @BindingAdapter("thumbUrl")
