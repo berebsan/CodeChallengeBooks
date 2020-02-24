@@ -2,6 +2,7 @@ package com.brs.codechallenge.middleware
 
 import com.brs.codechallenge.constants.Constants
 import com.brs.codechallenge.model.api.GoogleBooksResponseModel
+import com.brs.codechallenge.model.injection.ServiceModule
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -15,20 +16,5 @@ interface GoogleBooksService {
     fun getGoogleBooksAPI(@Query("q") q: String,
                           @Query("key") key: String = Constants.API_KEY):
             Observable<GoogleBooksResponseModel>
-
-    companion object {
-        fun create(): GoogleBooksService {
-
-            val retrofit = Retrofit.Builder()
-                .addCallAdapterFactory(
-                    RxJava2CallAdapterFactory.create())
-                .addConverterFactory(
-                    GsonConverterFactory.create())
-                .baseUrl(Constants.BASE_URL)
-                .build()
-
-            return retrofit.create(GoogleBooksService::class.java)
-        }
-    }
 }
 

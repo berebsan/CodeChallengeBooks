@@ -1,4 +1,4 @@
-package com.brs.codechallenge.util
+package com.brs.codechallenge.utils
 
 import com.brs.codechallenge.model.api.VolumeModel
 

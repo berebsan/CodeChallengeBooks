@@ -6,7 +6,9 @@ data class BookInfoModel (
     @SerializedName("title")
     val bookTitle: String?,
     @SerializedName("authors")
-    val bookAuthors: ArrayList<String>,
+    val bookAuthors: List<String>?,
     @SerializedName("imageLinks")
-    val images: ImageLinksModel
+    val images: ImageLinksModel?,
+    @SerializedName("description")
+    val information: String?
 )

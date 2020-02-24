@@ -6,5 +6,5 @@ data class VolumeModel (
     @SerializedName("kind")
     val kindVolume: String?,
     @SerializedName("volumeInfo")
-    val bookInfo: BookInfoModel
+    val bookInfo: BookInfoModel?
 )
