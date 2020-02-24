@@ -2,7 +2,7 @@ package com.brs.codechallenge.model.api
 
 import com.google.gson.annotations.SerializedName
 
-class GoogleBooksResponseModel(
+data class GoogleBooksResponseModel(
     @SerializedName("kind")
     val kind: String?,
     @SerializedName("totalItems")

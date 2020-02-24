@@ -14,48 +14,59 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="@dimen/dp8">
-            <TextView
-                android:id="@+id/book_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp24"
-                android:textColor="@color/colorPrimaryText"
-                tools:text="Title"
-                />
-
-            <TextView
-                android:id="@+id/book_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorSecondaryText"
-                tools:text="Author" />
-
             <ImageView
                 android:id="@+id/book_thumb"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp80"
-                android:layout_marginTop="@dimen/dp8"
+                android:layout_width="@dimen/dp120"
+                android:layout_height="@dimen/dp180"
+                android:layout_gravity="center_vertical"
                 android:background="@color/colorDivider"
                 android:contentDescription="@string/book_thumbnail"
                 app:srcCompat="@mipmap/ic_launcher_foreground" />
 
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/book_info"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/sp8"
-                        tools:text="Information"/>
-                </LinearLayout>
-            </ScrollView>
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/dp8">
+                <TextView
+                    android:id="@+id/book_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/colorPrimaryText"
+                    tools:text="Title"
+                    />
 
+                <TextView
+                    android:id="@+id/book_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSecondaryText"
+                    tools:text="Author" />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100"
+                    android:layout_marginTop="@dimen/dp16">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/book_meta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp8"
+                            tools:text="Metadata"/>
+                    </LinearLayout>
+                </ScrollView>
+                <ImageButton
+                    android:id="@+id/button_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_more_horiz_24px" />
+            </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

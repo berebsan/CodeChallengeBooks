@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Book browser</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="connection_error">Connection error</string>
     <string name="connection_error_msg">Check your internet connection and try again</string>
     <string name="tutorial_image">Tutorial image</string>
     <string name="book_thumbnail">Book thumbnail</string>
+    <string name="button_more">View more button</string>
+    <string name="results_label">Showing results %i to %i out of %i</string>
 </resources>
