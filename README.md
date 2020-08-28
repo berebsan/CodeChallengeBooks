@@ -1,5 +1,5 @@
 # CodeChallengeBooks
-Book browser using GoogleBooks API for SiriusXM code challenge
+Book browser using GoogleBooks API
 
 See Demo here: https://photos.app.goo.gl/GBzpUvxDMaATLN6U6
 
